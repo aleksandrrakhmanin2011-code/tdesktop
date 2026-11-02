@@ -1,6 +1,7 @@
-name: Windows.
+﻿name: Windows.
 
 on:
+  workflow_dispatch:
   push:
     # Pushes to the canary or private-ci branches run their own workflows.
     branches-ignore:
@@ -253,3 +254,4 @@ jobs:
           name: ${{ env.ARTIFACT_NAME }}
           path: artifact\
           retention-days: 1
+
